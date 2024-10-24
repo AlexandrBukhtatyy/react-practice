@@ -1,12 +1,14 @@
-type Props = {
+import SecondFilter from './second-filter';
+import Filter from './filter';
 
-};
+type Props = {};
 const Hotels = (props: Props) => {
-    return (
-        <div className="container mx-auto">
-            Hotels
-        </div>
-    );
+  return (
+    <>
+      <Filter />
+      <SecondFilter />
+    </>
+  );
 };
 
 export default Hotels;
