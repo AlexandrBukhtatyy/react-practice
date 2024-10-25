@@ -26,11 +26,11 @@ export interface TagProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof tagVariants> {}
 
-function Tag({ className, variant, ...props }: TagProps) {
+function Tag({ className, variant, setExpanded, ...props }: TagProps) {
   return (
-    <div className="mx-2 h-12 flex">
+    <div className="mx-2 h-10 flex">
       <div className={cn(tagVariants({ variant }), className)} {...props} />{' '}
-      <i className="cursor-pointer">
+      <i className="cursor-pointer" onClick={() => setExpanded(false)}>
         <X className="h-3 w-3" />
       </i>
     </div>
