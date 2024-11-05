@@ -2,10 +2,10 @@
 import { Star } from 'lucide-react';
 
 type Props = {
-  onChange: (stars: number) => void;
+  onChange?: (stars: number) => void;
 };
 
-const Stars = ({ onChange }: Props) => {
+const Stars = ({ onChange = () => {} }: Props) => {
   const [selectedStars, setSelectedStars] = useState(0);
 
   const handleStarClick = (star: number) => {

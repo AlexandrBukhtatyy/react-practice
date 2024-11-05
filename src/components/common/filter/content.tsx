@@ -8,8 +8,8 @@ type Props = {
 const FilterContent = (props: Props) => {
   const { children } = props;
   return (
-    <div className="bg-gray-300">
-      <div className="container mx-auto flex p-1.5">
+    <div className="bg-sky-100">
+      <div className="container mx-auto flex gap-2 py-3">
         {children}
         <Button>
           <Search />

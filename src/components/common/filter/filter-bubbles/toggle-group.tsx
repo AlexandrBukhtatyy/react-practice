@@ -11,7 +11,7 @@ type Props = {
 };
 
 const FilterToggleGroup = (props: Props) => {
-  const { title, titles, type, size } = props;
+  const { title, titles, type = 'multiple', size = 'sm' } = props;
   const [expanded, setExpanded] = useState(false);
   return (
     <>
@@ -30,11 +30,6 @@ const FilterToggleGroup = (props: Props) => {
       )}
     </>
   );
-};
-
-FilterToggleGroup.defaultProps = {
-  size: 'sm',
-  type: 'multiple',
 };
 
 export default FilterToggleGroup;
